@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>Account</title>
+</head>
+
+        <style>
+            body{
+                background-image: url('sunny.jpg');
+                background-repeat: no-repeat;
+            background-size: cover;
+            }
+            img{
+              width: auto;
+            }
+             .input{
+                width: 80%;
+                padding: 8px;
+                color: navy;
+                font-size: 19px;
+             }
+             #div1{
+                width: 500px;
+                height: auto;
+                padding: 40px;
+                margin: 70px 400px;
+                background-color: rgb(37, 36, 36);
+                opacity: 0.7;
+                color:  white;
+                text-align: center;
+                font-family: Arial;
+
+            }
+            .a1{
+                color: white;
+              text-decoration: underline;
+            }
+            #a2{
+                background-color: darkblue;
+                padding: 8px 15PX;
+                color: white;
+                text-decoration: none;
+
+            }
+            #a3{
+                background-color: rgb(7, 160, 231);
+            text-decoration: none;
+                padding: 8px 15PX;
+                color: white;
+            }
+            #a4{
+                background-color: orangered;
+                padding: 8px 15PX;
+                color: white;
+                text-decoration: none;
+
+            }
+        a{
+            color: whitesmoke;
+            text-decoration: none;
+        }
+        #btn{
+    padding: 10px 20px;
+    color: white;
+    background-image: linear-gradient(50deg, maroon , black);
+    font-size: 15px;
+    border-top-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+.error{
+      color: yellow;
+      margin: 4px;
+      text-align: left;
+}
+       
+        /* responsive for phone */
+         @media only screen and  (max-width:720px)   {
+          #div1 {
+    width: 250px;
+    height: fit-content;
+    margin: 50PX 50px;
+    padding: 2px;
+}
+#a2 {
+    padding: 4px;
+}
+#a3 {
+    padding: 4px;
+}
+#a4 {
+    padding: 4PX;
+}
+body {
+    background-size: 100% 100%;
+}
+img {
+    display: none;
+} 
+#a2 {
+    margin: 20px;
+        }
+ .fa {
+    font-size: 20px;
+    margin: 3px;
+    }
+}
+
+        </style>
+    </head>
+    <body>
+       <div id="div1"><h1><b>Create Account</b></h1>
+            <form action="https://arfeenzahra.github.io/create.github.io/"onsubmit="return validateform()">
+            <input type="email" placeholder="E-mail" class="input" id="email" >
+            <br><p id="emailerror" class="error"> </p><br>
+            <input type="password"placeholder="Password"class="input" id="password" ><br>
+            <p id="passerror" class="error"> </p>
+            <button id="btn">Submit</button><br>
+            <input type="checkbox">I have read and agree to the 
+            <a href="https://www.aafp.org/about/policies/all/provider.html" target="_blank" class="a1">Terms of use</a> and <a href="https://www.privacypolicies.com/blog/privacy-policy-template/" target="_blank"class="a1">Privacy Policy</a> <br>
+        
+<br>
+            <div style="background-color: green; padding:7px;"><a href="https://arfeenzahra.github.io/create.github.io/" target="_blank">Create Account</a></div>
+<br>
+        <img src="whiteline.png"> or sign up with social media <img src="whiteline.png">  
+     <br> <br><br>
+     <a href="https://web.facebook.com/"target="_blank" id="a2"> <font-face="arial" size="5">
+        <span class="fa fa-facebook" aria-hidden="true"></span>
+        Facebook
+    </font-face></a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/"target="_blank" id="a3"><font-face="arial" size="5">
+        <span class="fa fa-twitter" aria-hidden="true"></span>
+        Twitter
+    </font-face></a>&nbsp;&nbsp;&nbsp;<a href="https://www.google.com/"target="_blank" id="a4"> <font-face="arial" size="3">
+        <span class="fa fa-google-plus" aria-hidden="true"></span>
+        Google
+    </font-face></a>
+     <br><br><br>
+     Already have an account?<a href="https://arfeenzahra.github.io/create.github.io/" style="text-decoration: underline;" target="_blank">sign in</a>
+    </div>
+    <script>
+       let email = document.getElementById("email");
+       let password = document.getElementById("password");
+       let flag = 1;
+       function validateform(){
+           if(email.value == ""){
+              document.getElementById("emailerror").innerHTML = "email is empty";
+              flag = 0;
+           }
+           else{
+              document.getElementById("emailerror").innerHTML = "";
+                   flag = 1;
+           }
+            
+           if(password.value == ""){
+              document.getElementById("passerror").innerHTML = "password is empty";
+              flag = 0;
+           }
+           else{
+              document.getElementById("passerror").innerHTML = "";
+                flag = 1;
+           }
+           if(flag){
+               return true;
+           }
+           else{
+              return false;
+           }
+       }
+    </script>
+    </body>
+</html>
